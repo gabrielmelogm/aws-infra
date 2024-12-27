@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.region
+}
+
 module "ec2_playground" {
   source = "./modules/ec2-playground"
   ami_id      = "ami-0e2c8caa4b6378d8c"
