@@ -4,6 +4,11 @@ provider "aws" {
 
 resource "aws_s3_bucket" "coolify_bucket" {
   bucket = "coolify"
+
+  tags = {
+    Name = "Coolify"
+    Environment = "production"
+  }
 }
 
 output "bucket" {
