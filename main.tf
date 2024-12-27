@@ -13,3 +13,7 @@ module "ec2_playground" {
 output "public_ip" {
   value = module.ec2_playground.public_ip
 }
+
+output "public_dns" {
+  value = module.ec2_playground.public_dns
+}
