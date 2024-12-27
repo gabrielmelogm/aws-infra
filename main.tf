@@ -9,8 +9,3 @@ module "ec2_playground" {
   public_key  = var.public_key
   availability_zone = var.availability_zone
 }
-
-output "public_ip" {
-  value = aws_instance.ec2_instance.public_ip
-}
-
