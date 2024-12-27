@@ -1,8 +1,3 @@
-variable "region" {
-  description = "Região da AWS onde os recursos serão criados"
-  default     = "us-east-1"
-}
-
 variable "vpc_cidr_block" {
   description = "Bloco CIDR da VPC"
   default     = "10.0.0.0/16"

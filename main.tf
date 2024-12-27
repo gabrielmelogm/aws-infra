@@ -1,12 +1,11 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 module "vpc_playground" {
   source = "./modules/vpc-playground"
-  region      = "us-east-1"
   ami_id      = "ami-0e2c8caa4b6378d8c"
-  key_name    = "my-key"
-  public_key  = file("~/.ssh/playground.pem.pub")
-  availability_zone = "us-east-1a"
+  key_name    = var.key_name
+  public_key  = var.public_key
+  availability_zone = var.availability_zone
 }
