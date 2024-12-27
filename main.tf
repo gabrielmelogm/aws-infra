@@ -9,3 +9,4 @@ module "vpc_playground" {
   public_key  = var.public_key
   availability_zone = var.availability_zone
 }
+
