@@ -113,3 +113,7 @@ resource "aws_instance" "ec2_instance" {
     delete_on_termination = true
   }
 }
+
+output "public_ip" {
+  value = aws_instance.ec2_instance.public_ip
+}
