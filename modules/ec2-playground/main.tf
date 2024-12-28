@@ -128,10 +128,10 @@ resource "aws_route53_record" "domain_route_record" {
 
 resource "aws_route53_record" "alias_domain_route_record" {
   zone_id = aws_route53_zone.route_zone.id
-  name = var.domain
+  name = "*"
   type = "A"
   ttl = 60
-  records = ["*.${var.domain}"]
+  records = var.domain
 }
 
 output "public_ip" {
