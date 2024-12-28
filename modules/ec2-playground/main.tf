@@ -129,9 +129,9 @@ resource "aws_route53_record" "domain_route_record" {
 resource "aws_route53_record" "alias_domain_route_record" {
   zone_id = aws_route53_zone.route_zone.id
   name = "*"
-  type = "A"
+  type = "CNAME"
   ttl = 60
-  records = [aws_instance.ec2_instance.public_ip]
+  records = var.domain
 }
 
 output "public_ip" {
