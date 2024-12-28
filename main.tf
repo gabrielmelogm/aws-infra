@@ -10,6 +10,10 @@ module "ec2_playground" {
   availability_zone = var.availability_zone
 }
 
+module "s3_coolify" {
+  source = "./modules/s3-coolify"
+}
+
 output "public_ip" {
   value = module.ec2_playground.public_ip
 }
@@ -18,3 +22,10 @@ output "public_dns" {
   value = module.ec2_playground.public_dns
 }
 
+output "s3_endpoint" {
+  value = module.s3_coolify.s3_endpoint
+}
+
+output "s3_bucket" {
+  value = module.s3_coolify.s3_bucket
+}
