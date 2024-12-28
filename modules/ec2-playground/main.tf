@@ -118,9 +118,9 @@ resource "aws_route53_zone" "route_zone" {
   name = var.domain
 }
 
-resource "aws_route53_record" "route_record" {
+resource "aws_route53_record" "domain_route_record" {
   zone_id = aws_route53_zone.route_zone.id
-  name = var.sub_domain
+  name = var.domain
   type = "A"
   ttl = 60
   records = [aws_instance.ec2_instance.public_ip]
