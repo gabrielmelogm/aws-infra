@@ -131,7 +131,7 @@ resource "aws_route53_record" "alias_domain_route_record" {
   name = "*"
   type = "A"
   ttl = 60
-  records = var.domain
+  records = [aws_instance.ec2_instance.public_ip]
 }
 
 output "public_ip" {
