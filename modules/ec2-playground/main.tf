@@ -131,7 +131,7 @@ resource "aws_route53_record" "alias_domain_route_record" {
   name = "*"
   type = "CNAME"
   ttl = 60
-  records = var.domain
+  records = [var.domain]
 }
 
 output "public_ip" {
