@@ -32,3 +32,13 @@ variable "availability_zone" {
   description = "Zona de disponibilidade para a sub-rede"
   default     = "us-east-1a"
 }
+
+variable "domain" {
+  description = "Domain"
+  default     = "gabrielmelo.shop"
+}
+
+variable "sub_domain" {
+  description = "Sub Domain"
+  default     = "www.gabrielmelo.shop"
+}
