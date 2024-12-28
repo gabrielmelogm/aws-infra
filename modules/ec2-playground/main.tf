@@ -126,14 +126,6 @@ resource "aws_route53_record" "domain_route_record" {
   records = [aws_instance.ec2_instance.public_ip]
 }
 
-resource "aws_route53_record" "subdomain_route_record" {
-  zone_id = aws_route53_zone.route_zone.id
-  name = var.sub_domain
-  type = "A"
-  ttl = 60
-  records = var.domain
-}
-
 output "public_ip" {
   value = aws_instance.ec2_instance.public_ip
 }
